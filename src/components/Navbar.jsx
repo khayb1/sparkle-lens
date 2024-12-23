@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
 
@@ -13,7 +14,7 @@ export const Navbar = () => {
   return (
     <nav>
       <Link to="/" className="">
-        <img src="fav.png" alt="logo" className="w-[100px] h-[80px] " />
+        <img src='./images/assets/fav.png' alt="logo" className="w-[100px] h-[80px] " />
       </Link>
       <div className={`menu ${menuOpen ? "open" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>

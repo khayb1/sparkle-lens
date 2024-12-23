@@ -11,7 +11,7 @@ export const Services = () => {
   return (
     <>
       <NewHeader 
-      backgroundImage={("./src/images/service.gif")}
+      backgroundImage={("./images/service.gif")}
         header='SERVICES'
         text = 'I provide wide range of services from photoshoot, party photoshoot, event coverage, wedding, picture frame and more.'
       />

@@ -7,7 +7,7 @@ export const About = () => {
   return (
     <>
     <NewHeader
-  backgroundImage={("/src/images/about-bg.webp")}
+  backgroundImage={("./images/about-bg.webp")}
   header="ABOUT"
   text="Hello There I am Yaw a professional photographer"
   className="mb-10"
@@ -15,7 +15,7 @@ export const About = () => {
       <div className="flex flex-col md:flex-row items-center md:items-start p-10 pb-24">
         <div className="flex-1 md:w-1/2 bg-white p-5 pb-28 m-6 md:m-12 shadow-lg border border-gray-300 hover:rotate-0 transition duration-500 -rotate-6 relative">
         <img
-          src="src/images/avatar.jpg"
+          src="./images/avatar.jpg"
           alt="About Image"
           className="w-full h-auto object-cover rounded-lg"
         />
