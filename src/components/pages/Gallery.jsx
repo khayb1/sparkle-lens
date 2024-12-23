@@ -52,7 +52,7 @@ export const Gallery = () => {
   return (
     <>
       <NewHeader
-        backgroundImage={'src/images/gallery.webp'}
+        backgroundImage={'./src/images/gallery.webp'}
         header={'Gallery Page'}
         text={'Browse through our curated collection of stunning photos'}
       />

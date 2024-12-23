@@ -1,73 +1,73 @@
 [
     {
       "id": 1,
-      "src": "src/images/gallery/graduation1.jpg",
+      "src": "/src/images/gallery/graduation1.jpg",
       "alt": "Picture 1",
       "category": "graduation"
     },
     {
       "id": 2,
-      "src": "src/images/gallery/wedding1.webp",
+      "src": "/src/images/gallery/wedding1.webp",
       "alt": "Picture 2",
       "category": "wedding"
     },
     {
       "id": 3,
-      "src": "src/images/gallery/nature.jpg",
+      "src": "/src/images/gallery/nature.jpg",
       "alt": "Picture 3",
       "category": "nature"
     },
     {
       "id": 4,
-      "src": "src/images/gallery/wedding2.jpg",
+      "src": "/src/images/gallery/wedding2.jpg",
       "alt": "Picture 4",
       "category": "wedding"
     },
     {
       "id": 5,
-      "src": "src/images/gallery/nature2.jpg",
+      "src": "/src/images/gallery/nature2.jpg",
       "alt": "Picture 5",
       "category": "nature"
     },
     {
       "id": 6,
-      "src": "src/images/gallery/wedding4.webp",
+      "src": "/src/images/gallery/wedding4.webp",
       "alt": "Picture 6",
       "category": "wedding"
     },
     {
       "id": 7,
-      "src": "src/images/gallery/wedding3.jpg",
+      "src": "/src/images/gallery/wedding3.jpg",
       "alt": "Picture 7",
       "category": "wedding"
     },
     {
       "id": 8,
-      "src": "src/images/gallery/graduation2.jpg",
+      "src": "/src/images/gallery/graduation2.jpg",
       "alt": "Picture 8",
       "category": "graduation"
     },
     {
       "id": 9,
-      "src": "src/images/gallery/graduation3.jpg",
+      "src": "/src/images/gallery/graduation3.jpg",
       "alt": "Picture 9",
       "category": "graduation"
     },
     {
       "id": 10,
-      "src": "src/images/gallery/nature3.jpg",
+      "src": "/src/images/gallery/nature3.jpg",
       "alt": "Picture 10",
       "category": "nature"
     },
     {
       "id": 11,
-      "src": "src/images/gallery/nature4.jpg",
+      "src": "/src/images/gallery/nature4.jpg",
       "alt": "Picture 11",
       "category": "nature"
     },
     {
       "id": 12,
-      "src": "src/images/gallery/nature5.jpg",
+      "src": "/src/images/gallery/nature5.jpg",
       "alt": "Picture 12",
       "category": "nature"
     }

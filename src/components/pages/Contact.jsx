@@ -31,7 +31,7 @@ export const Contact = () => {
   return (
     <>
    <NewHeader
-    backgroundImage={("src/images/contact.webp")}
+    backgroundImage={("./src/images/contact.webp")}
     header='Contact'
     text='Feel free to contact me anytime to get beautiful pictures and also picture frames.'
     />

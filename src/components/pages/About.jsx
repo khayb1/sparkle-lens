@@ -7,7 +7,7 @@ export const About = () => {
   return (
     <>
     <NewHeader
-  backgroundImage={("src/images/about-bg.webp")}
+  backgroundImage={("/src/images/about-bg.webp")}
   header="ABOUT"
   text="Hello There I am Yaw a professional photographer"
   className="mb-10"
