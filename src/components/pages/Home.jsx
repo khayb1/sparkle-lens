@@ -25,7 +25,7 @@ export const Home = () => {
 
         <div className="flex items-center justify-center h-3/4 mt-4 ">
         <img
-        src="./images/hero image.png" 
+        src="images/hero image.png" 
         alt="Photography img"
         className="w-100 h-full animate-custom-bounce object-cover"
       />

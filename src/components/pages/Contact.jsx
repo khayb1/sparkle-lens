@@ -53,7 +53,7 @@ export const Contact = () => {
   return (
     <>
       <NewHeader
-        backgroundImage={"./images/contact.webp"}
+        backgroundImage={"images/contact.webp"}
         header="Contact"
         text="Feel free to contact me anytime to get beautiful pictures and also picture frames."
       />
@@ -62,7 +62,7 @@ export const Contact = () => {
         <div className="w-full md:w-1/2 flex flex-col justify-center">
           <h2 className="text-3xl md:text-5xl font-bold text-center py-1">Get in Touch</h2>
           <img
-            src="./images/collaborate.gif"
+            src="images/collaborate.gif"
             alt="contact image"
             className="m-auto w-full max-w-xs md:max-w-sm"
           />

@@ -22,7 +22,7 @@ export const Gallery = () => {
   useEffect(() => {
     const fetchPictures = async () => {
       try {
-        const response = await fetch("./images/assets/pictures.json");
+        const response = await fetch("images/assets/pictures.json");
         const data = await response.json();
         setPictures(data);
         setFilteredPictures(data);
@@ -52,7 +52,7 @@ export const Gallery = () => {
   return (
     <>
       <NewHeader
-        backgroundImage={'./images/gallery.webp'}
+        backgroundImage={'images/gallery.webp'}
         header={'Gallery Page'}
         text={'Browse through our curated collection of stunning photos'}
       />

@@ -3,11 +3,12 @@ import { NewHeader } from "../NewHeader";
 import Testimonials from "../Testimonials";
 
 
+
 export const About = () => {
   return (
     <>
     <NewHeader
-  backgroundImage={("./images/about-bg.webp")}
+  backgroundImage={("images/about-bg.webp")}
   header="ABOUT"
   text="Hello There I am Yaw a professional photographer"
   className="mb-10"
