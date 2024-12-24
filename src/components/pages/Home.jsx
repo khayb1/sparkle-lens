@@ -5,7 +5,7 @@ import "../pages/Home.css";
 import { HireBtn } from "../HireBtn";
 import { Hero } from "../index";
 
-const Home = () => {
+const Home = (href) => {
   return (
     <div className=" h-screen flex items-center justify-center space-x-10 bg-cover bg-center hero px-8 body ">
       {/* Content */}
@@ -17,7 +17,7 @@ const Home = () => {
           Professional photography services for all occasions. Creating
           memories that last a lifetime.
         </p>
-        <HireBtn href="/gallery">View Gallery</HireBtn>
+        <HireBtn href='/gallery'>View Gallery</HireBtn>
       </div>
 
       <div className="flex items-center justify-center h-3/4 mt-4 ">
