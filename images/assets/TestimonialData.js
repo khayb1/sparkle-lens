@@ -1,33 +1,35 @@
+import { Avatar, Tes2, Tes3, Tes4, Tes5, Tes6, TesPic1 } from '/src/components/index.js';
+
 const testimonials = [
   {
     id: 1,
     name: 'Jane Smith',
     feedback: 'This service was amazing and exceeded all my expectations!',
-    image: 'images/avatar.jpg',
+    image: Avatar,
   },
   {
     id: 2,
     name: 'John Doe',
     feedback: 'Highly professional team and a great experience overall.',
-    image: 'images/tes2.jpg',
+    image: Tes2,
   },
   {
     id: 3,
     name: 'Alice Johnson',
     feedback: 'I would recommend them to anyone looking for top-notch service!',
-    image: 'images/tes5.jpg',
+    image: Tes5,
   },
   {
     id: 4,
     name: 'Derrick Duodu',
     feedback: 'I would recommend them to anyone looking for top-notch service!',
-    image: 'images/tes4.jpg',
+    image: Tes4,
   },
   {
     id: 5,
     name: 'Keziah Sarfo',
     feedback: 'I would recommend them to anyone looking for top-notch service!',
-    image: 'images/tes6.jpg',
+    image: Tes6,
   },
 ];
 
