@@ -8,7 +8,7 @@ import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-thumbnail.css";
 import "lightgallery/css/lg-zoom.css";
 import { GalleryImg } from "../index";
-
+import PictureData from "../../../images/assets/pictures"
 // Plugins
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
@@ -23,32 +23,13 @@ const Gallery = () => {
   const categories = ["All", "graduation", "wedding", "nature"];
 
   useEffect(() => {
-    const fetchPictures = async () => {
-      try {
-        // Fetch the JSON file
-        const response = await fetch("../../../images/assets/pictures.json");
-
-        // Check if the response is ok (status code 200-299)
-        if (!response.ok) {
-          throw new Error(`Error fetching pictures: ${response.statusText}`);
-        }
-
-        // Parse the JSON data
-        const data = await response.json();
-
-        // Set state
-        setPictures(data);
-        setFilteredPictures(data);
-        setLoading(false);
-      } catch (error) {
-        // Handle errors (e.g., network failure, invalid JSON)
-        setError(error.message);
-        setLoading(false);
-      }
-    };
-
-
-    fetchPictures();
+    try {
+      setPictures(PictureData);
+      setFilteredPictures(PictureData);
+      setLoading(false);
+    } catch (error) {
+      setError(error);
+    }
   }, []);
 
   const handleChange = (event, newValue) => {
