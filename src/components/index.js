@@ -5,7 +5,7 @@ import AboutBg from "../../images/about-bg.webp";
 import Avatar from "../../images/avatar.jpg";
 import Collaborate from "../../images/collaborate.gif";
 import ContactImg from "../../images/contact.webp";
-import Gallery from "../../images/gallery.webp";
+import GalleryImg from "../../images/gallery.webp";
 import Giphy from "../../images/giphy.webp";
 import Hero from "../../images/hero image.png";
 import Service from "../../images/service.gif";
@@ -35,7 +35,7 @@ export {
   Avatar,
   Collaborate,
   ContactImg,
-  Gallery,
+  GalleryImg,
   Giphy,
   Hero,
   Service,
