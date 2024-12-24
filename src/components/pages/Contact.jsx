@@ -1,9 +1,11 @@
+/** @format */
+
 import React from "react";
-import NewHeader  from "../NewHeader";
+import { NewHeader } from "../NewHeader";
 import { ToastContainer, toast } from "react-toastify";
+import { Collaborate, ContactImg } from "../index";
 
-
- const Contact = () => {
+const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -19,7 +21,7 @@ import { ToastContainer, toast } from "react-toastify";
       const data = await response.json();
 
       if (data.success) {
-        toast.success("Message Submitted Successfully!", {
+        toast.success("Form Submitted Successfully!", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -53,21 +55,24 @@ import { ToastContainer, toast } from "react-toastify";
   return (
     <>
       <NewHeader
-        backgroundImage={"images/contact.webp"}
+        backgroundImage={ContactImg}
         header="Contact"
         text="Feel free to contact me anytime to get beautiful pictures and also picture frames."
       />
 
       <div className="max-w-screen-lg w-full rounded-lg p-6 my-4 m-auto flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 flex flex-col justify-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-center py-1">Get in Touch</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-center py-1">
+            Get in Touch
+          </h2>
           <img
-            src="images/collaborate.gif"
-            alt="contact image"
+            src={Collaborate}
+            alt="Collaborate"
             className="m-auto w-full max-w-xs md:max-w-sm"
           />
           <p className="text-sm md:text-lg text-center py-1">
-            Feel free to text or call me for all your events. Let me help you capture beautiful memories with stunning pictures.
+            Feel free to text or call me for all your events. Let me help you
+            capture beautiful memories with stunning pictures.
           </p>
         </div>
 
@@ -131,4 +136,5 @@ import { ToastContainer, toast } from "react-toastify";
     </>
   );
 };
+
 export default Contact;

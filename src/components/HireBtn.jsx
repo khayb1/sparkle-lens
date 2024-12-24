@@ -1,6 +1,8 @@
-import React from 'react'
+/** @format */
 
- const HireBtn = ({ href, children }) => {
+import React from "react";
+
+export const HireBtn = ({ href, children }) => {
   return (
     <a
       href={href}
@@ -10,4 +12,3 @@ import React from 'react'
     </a>
   );
 };
-export default HireBtn;
