@@ -25,7 +25,7 @@ const Gallery = () => {
   useEffect(() => {
     const fetchPictures = async () => {
       try {
-        const response = await fetch("images/assets/pictures.json");
+        const response = await fetch('../../../images/assets/pictures.json');
         const data = await response.json();
         setPictures(data);
         setFilteredPictures(data);
