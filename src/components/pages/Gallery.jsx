@@ -13,7 +13,7 @@ import { GalleryImg } from "../index";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 
-export const Gallery = () => {
+const Gallery = () => {
   const [value, setValue] = useState(0);
   const [pictures, setPictures] = useState([]);
   const [filteredPictures, setFilteredPictures] = useState([]);
@@ -55,7 +55,7 @@ export const Gallery = () => {
   return (
     <>
       <NewHeader
-        backgroundImage={GalleryImg }
+        backgroundImage={GalleryImg}
         header={"Gallery Page"}
         text={"Browse through our curated collection of stunning photos"}
       />

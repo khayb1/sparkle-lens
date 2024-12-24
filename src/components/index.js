@@ -8,7 +8,7 @@ import ContactImg from "../../images/contact.webp";
 import GalleryImg from "../../images/gallery.webp";
 import Giphy from "../../images/giphy.webp";
 import Hero from "../../images/hero image.png";
-import Service from "../../images/service.gif";
+import ServiceGif from "../../images/service.gif";
 import TesPic1 from "../../images/tes pic1.jpg";
 import Tes2 from "../../images/tes2.jpg";
 import Tes3 from "../../images/tes3.jpg";
@@ -38,7 +38,7 @@ export {
   GalleryImg,
   Giphy,
   Hero,
-  Service,
+  ServiceGif,
   TesPic1,
   Tes2,
   Tes3,
