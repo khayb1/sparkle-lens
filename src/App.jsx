@@ -1,14 +1,22 @@
+/** @format */
+
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Navbar } from "./components/Navbar";
-import {Home, About, Contact, Services, Gallery,  } from "./components/pages/index";
-import { NotFound } from "./components/pages/NotFound";
-import  Footer  from "./components/Footer";
+import {
+  Home,
+  About,
+  Contact,
+  Services,
+  Gallery,
+} from "./components/pages/index";
+import NotFound from "./components/pages/NotFound";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

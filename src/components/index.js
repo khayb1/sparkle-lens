@@ -15,6 +15,7 @@ import Tes3 from "../../images/tes3.jpg";
 import Tes4 from "../../images/tes4.jpg";
 import Tes5 from "../../images/tes5.jpg";
 import Tes6 from "../../images/tes6.jpg";
+import FavPng from '../../images/assets/fav.png';
 
 import Graduation1 from "../../images/gallery/graduation1.jpg";
 import Graduation2 from "../../images/gallery/graduation2.jpg";
@@ -45,6 +46,7 @@ export {
   Tes4,
   Tes5,
   Tes6,
+  FavPng,
   Graduation1,
   Graduation2,
   Graduation3,
