@@ -2,7 +2,7 @@ import React from 'react'
 
 import '../components/MainHeader.css'
 
-export const NewHeader = ({header, text,backgroundImage}) => {
+ const NewHeader = ({header, text,backgroundImage}) => {
   return (
    <>
   <div 
@@ -25,3 +25,4 @@ export const NewHeader = ({header, text,backgroundImage}) => {
    </>
   )
 }
+export default NewHeader;

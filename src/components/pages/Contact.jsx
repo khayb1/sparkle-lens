@@ -1,9 +1,9 @@
 import React from "react";
-import { NewHeader } from "../NewHeader";
+import NewHeader  from "../NewHeader";
 import { ToastContainer, toast } from "react-toastify";
-import "../pages/Contact.css"
 
-export const Contact = () => {
+
+ const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -19,7 +19,7 @@ export const Contact = () => {
       const data = await response.json();
 
       if (data.success) {
-        toast.success("Form Submitted Successfully!", {
+        toast.success("Message Submitted Successfully!", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -131,5 +131,4 @@ export const Contact = () => {
     </>
   );
 };
-
-
+export default Contact;

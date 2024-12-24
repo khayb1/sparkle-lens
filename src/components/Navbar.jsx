@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
 
-export const Navbar = () => {
+ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuClose = () => {
@@ -41,3 +41,4 @@ export const Navbar = () => {
     </nav>
   );
 };
+export default Navbar;

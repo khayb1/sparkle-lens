@@ -1,17 +1,17 @@
 import React from "react";
 import Testimonials from "../Testimonials";
-import { NewHeader } from "../NewHeader";
+import NewHeader  from "../NewHeader";
 import Pricing from "../Pricing";
-import { ServiceCard } from "../ServiceCard";
+import ServiceCard  from "../ServiceCard";
 import { CiVideoOn, CiCamera, CiPen } from 'react-icons/ci';
 import { GiWoodFrame } from "react-icons/gi";
 
 
-export const Services = () => {
+const Services = () => {
   return (
     <>
       <NewHeader 
-      backgroundImage={("images/service.gif")}
+      backgroundImage={("/images/service.gif")}
         header='SERVICES'
         text = 'I provide wide range of services from photoshoot, party photoshoot, event coverage, wedding, picture frame and more.'
       />
@@ -63,3 +63,4 @@ export const Services = () => {
     </> 
   )
 };
+export default Services;

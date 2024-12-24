@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const ServiceCard = ({ServiceIcon, ServiceTitle, SerivceInfo} ) => {
+const ServiceCard = ({ServiceIcon, ServiceTitle, SerivceInfo} ) => {
   return (
     <>
         <div className='px-5 py-8 w-64 h-72  bg-slate-300 text-lg font-light rounded-lg cursor-pointer            hover:scale-105 ease-in-out duration-300  shadow-lg hover:bg-blue-200'>
@@ -12,3 +12,4 @@ export const ServiceCard = ({ServiceIcon, ServiceTitle, SerivceInfo} ) => {
     </>
   )
 }
+export default ServiceCard;

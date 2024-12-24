@@ -1,10 +1,10 @@
 import React from "react";
-import { NewHeader } from "../NewHeader";
+import  NewHeader  from "../NewHeader";
 import Testimonials from "../Testimonials";
 
 
 
-export const About = () => {
+ const About = () => {
   return (
     <>
     <NewHeader
@@ -44,3 +44,4 @@ export const About = () => {
     </>
   );
 };
+export default About;

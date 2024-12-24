@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, Tabs, Tab, Card, CardMedia } from "@mui/material";
-import {NewHeader} from "../NewHeader";
+import NewHeader from "../NewHeader";
 import LightGallery from 'lightgallery/react';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-thumbnail.css';
@@ -10,7 +10,7 @@ import 'lightgallery/css/lg-zoom.css';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
-export const Gallery = () => {
+const Gallery = () => {
   const [value, setValue] = useState(0);
   const [pictures, setPictures] = useState([]);
   const [filteredPictures, setFilteredPictures] = useState([]);
@@ -22,7 +22,7 @@ export const Gallery = () => {
   useEffect(() => {
     const fetchPictures = async () => {
       try {
-        const response = await fetch("images/assets/pictures.json");
+        const response = await fetch("/images/assets/pictures.json");
         const data = await response.json();
         setPictures(data);
         setFilteredPictures(data);
@@ -52,12 +52,12 @@ export const Gallery = () => {
   return (
     <>
       <NewHeader
-        backgroundImage={'images/gallery.webp'}
+        backgroundImage={'/images/gallery.webp'}
         header={'Gallery Page'}
         text={'Browse through our curated collection of stunning photos'}
       />
     
-      <Box sx={{ width: "100%", bgcolor: "background.paper", padding: 2}}>
+      <Box sx={{ width: "100%", bgcolor: "background.paper", padding: "2px"}}>
         {/* Tabs */}
         <Tabs
           value={value}
@@ -75,7 +75,6 @@ export const Gallery = () => {
         <Box
           sx={{
             display: "flex",
-            flexWrap: "nowrap",
             justifyContent: "center",
             width: "100%",
             gap: 2,

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const HireBtn = ({ href, children }) => {
+ const HireBtn = ({ href, children }) => {
   return (
     <a
       href={href}
@@ -10,3 +10,4 @@ export const HireBtn = ({ href, children }) => {
     </a>
   );
 };
+export default HireBtn;
