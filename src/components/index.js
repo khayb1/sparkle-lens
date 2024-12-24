@@ -4,7 +4,7 @@ import AboutUsPhoto from "../../images/about us photo.jpg";
 import AboutBg from "../../images/about-bg.webp";
 import Avatar from "../../images/avatar.jpg";
 import Collaborate from "../../images/collaborate.gif";
-import Contact from "../../images/contact.webp";
+import ContactImg from "../../images/contact.webp";
 import Gallery from "../../images/gallery.webp";
 import Giphy from "../../images/giphy.webp";
 import Hero from "../../images/hero image.png";
@@ -34,7 +34,7 @@ export {
   AboutBg,
   Avatar,
   Collaborate,
-  Contact,
+  ContactImg,
   Gallery,
   Giphy,
   Hero,

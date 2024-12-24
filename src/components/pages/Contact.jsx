@@ -2,8 +2,9 @@ import React from "react";
 import { NewHeader } from "../NewHeader";
 import { ToastContainer, toast } from "react-toastify";
 import "../pages/Contact.css"
+import {Collaborate, ContactImg} from "../index";
 
-export const Contact = () => {
+const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -53,7 +54,7 @@ export const Contact = () => {
   return (
     <>
       <NewHeader
-        backgroundImage={"images/contact.webp"}
+        backgroundImage={ContactImg}
         header="Contact"
         text="Feel free to contact me anytime to get beautiful pictures and also picture frames."
       />
@@ -62,8 +63,8 @@ export const Contact = () => {
         <div className="w-full md:w-1/2 flex flex-col justify-center">
           <h2 className="text-3xl md:text-5xl font-bold text-center py-1">Get in Touch</h2>
           <img
-            src="images/collaborate.gif"
-            alt="contact image"
+            src={Collaborate}
+            alt="Collaborate"
             className="m-auto w-full max-w-xs md:max-w-sm"
           />
           <p className="text-sm md:text-lg text-center py-1">
