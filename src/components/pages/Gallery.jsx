@@ -1,14 +1,14 @@
 /** @format */
 
 import React, { useState, useEffect } from "react";
-import { Box, Tabs, Tab, Card, CardMedia } from "@mui/material";
+import { Box, Tabs, Tab } from "@mui/material";
 import { NewHeader } from "../NewHeader";
 import LightGallery from "lightgallery/react";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-thumbnail.css";
 import "lightgallery/css/lg-zoom.css";
 import { GalleryImg } from "../index";
-import PictureData from "../../../images/assets/pictures"
+import PictureData from "../../../images/assets/pictures";
 // Plugins
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
@@ -70,13 +70,10 @@ const Gallery = () => {
         {/* Gallery */}
         <Box
           sx={{
-            display: "flex",
-            flexWrap: "nowrap",
-            justifyContent: "center",
-            width: "100%",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
             gap: 2,
             marginTop: 2,
-            flexDirection: "row",
           }}
         >
           {(() => {
@@ -117,12 +114,11 @@ const Gallery = () => {
                     >
                       <Box
                         sx={{
-                          width: "450px",
-                          height: "400px",
+                          width: "100%",
+                          height: "300px",
                           overflow: "hidden",
                           display: "flex",
-                          flexDirection: "row",
-                          justifyContent: "space-between",
+                          justifyContent: "center",
                           alignItems: "center",
                           borderRadius: "8px",
                           boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
@@ -139,7 +135,6 @@ const Gallery = () => {
                             width: "100%",
                             height: "100%",
                             objectFit: "cover",
-                            // objectPosition: "top",
                           }}
                         />
                       </Box>
