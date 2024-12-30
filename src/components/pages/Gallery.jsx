@@ -1,14 +1,13 @@
 /** @format */
-
 import React, { useState, useEffect } from "react";
-import { Box, Tabs, Tab, Card, CardMedia } from "@mui/material";
+import { Box, Tabs, Tab, Grid } from "@mui/material";
 import { NewHeader } from "../NewHeader";
 import LightGallery from "lightgallery/react";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-thumbnail.css";
 import "lightgallery/css/lg-zoom.css";
 import { GalleryImg } from "../index";
-import PictureData from "../../../images/assets/pictures"
+import PictureData from "../../../images/assets/pictures";
 // Plugins
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
@@ -28,7 +27,7 @@ const Gallery = () => {
       setFilteredPictures(PictureData);
       setLoading(false);
     } catch (error) {
-      setError(error);
+      setError(error.message);
     }
   }, []);
 
@@ -68,17 +67,7 @@ const Gallery = () => {
         </Tabs>
 
         {/* Gallery */}
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "nowrap",
-            justifyContent: "center",
-            width: "100%",
-            gap: 2,
-            marginTop: 2,
-            flexDirection: "row",
-          }}
-        >
+        <Box sx={{ marginTop: 2 }}>
           {(() => {
             if (loading) {
               return (
@@ -109,42 +98,48 @@ const Gallery = () => {
             } else if (filteredPictures.length > 0) {
               return (
                 <LightGallery plugins={[lgThumbnail, lgZoom]} mode="lg-fade">
-                  {filteredPictures.map((pic) => (
-                    <a
-                      key={pic.id}
-                      href={pic.src}
-                      data-sub-html={`<h4>${pic.alt}</h4>`}
-                    >
-                      <Box
-                        sx={{
-                          width: "450px",
-                          height: "400px",
-                          overflow: "hidden",
-                          display: "flex",
-                          flexDirection: "row",
-                          justifyContent: "space-between",
-                          alignItems: "center",
-                          borderRadius: "8px",
-                          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-                          transition: "transform 0.5s ease-in-out",
-                          "&:hover": {
-                            transform: "scale(1.05)",
-                          },
-                        }}
-                      >
-                        <img
-                          src={pic.src}
-                          alt={pic.alt}
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                            // objectPosition: "top",
-                          }}
-                        />
-                      </Box>
-                    </a>
-                  ))}
+                  <Grid container spacing={2} sx={{ marginTop: 2 }}>
+                    {filteredPictures.map((pic, index) => (
+                      <Grid key={pic.id || index} item xs={12} sm={6} md={4}>
+                        {/* Ensure href and data-src are properly set */}
+                        <a
+                          key={pic.id}
+                          href={pic.src} // High-res image URL
+                          data-src={pic.src} // Ensure correct data-src for LightGallery
+                          data-sub-html={`<h4>${pic.alt}</h4>`} // Optional caption
+                        >
+                          <Box
+                            sx={{
+                              width: "100%",
+                              height: 0,
+                              paddingTop: "75%", // Aspect ratio 4:3
+                              position: "relative",
+                              borderRadius: "8px",
+                              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                              overflow: "hidden",
+                              transition: "transform 0.5s ease-in-out",
+                              "&:hover": {
+                                transform: "scale(1.05)",
+                              },
+                            }}
+                          >
+                            <img
+                              src={pic.src}
+                              alt={pic.alt}
+                              style={{
+                                position: "absolute",
+                                top: 0,
+                                left: 0,
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                              }}
+                            />
+                          </Box>
+                        </a>
+                      </Grid>
+                    ))}
+                  </Grid>
                 </LightGallery>
               );
             } else {
