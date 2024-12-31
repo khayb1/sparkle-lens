@@ -186,7 +186,9 @@ const Gallery = () => {
             }}
             onClick={handleClose}
           >
-            <FaTimes size={'2rem'} />
+            <FaTimes size={'2rem'}
+            className="text-red-500 hover:text-red-700 cursor-pointer transition-colors duration-300"
+             />
           </button>
           <img
             src={selectedPicture.src}
