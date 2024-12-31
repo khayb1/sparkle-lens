@@ -182,11 +182,11 @@ const Gallery = () => {
               border: "none",
               cursor: "pointer",
               color: "red",
-              fontSize: "32px",
+              fontSize: "2rem",
             }}
             onClick={handleClose}
           >
-            <FaTimes />
+            <FaTimes size={'2rem'} />
           </button>
           <img
             src={selectedPicture.src}
