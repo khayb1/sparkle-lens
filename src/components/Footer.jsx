@@ -6,9 +6,9 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-4">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center px-2">
         <p>
-          &copy; {new Date().getFullYear()} Your Photography Website. All rights
+          &copy; {new Date().getFullYear()} Spakle Lens Photography. All rights
           reserved.
         </p>
         <div className="flex justify-center space-x-4 mt-2">

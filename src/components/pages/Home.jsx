@@ -17,7 +17,7 @@ const Home = (href) => {
           Professional photography services for all occasions. Creating
           memories that last a lifetime.
         </p>
-        <HireBtn href='/gallery'>View Gallery</HireBtn>
+        <HireBtn >View Gallery</HireBtn>
       </div>
 
       <div className="flex items-center justify-center h-3/4 mt-4 ">

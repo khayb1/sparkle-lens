@@ -1,16 +1,10 @@
 /** @format */
 import React, { useState, useEffect } from "react";
 import { Box, Tabs, Tab, Grid } from "@mui/material";
+import { FaTimes, FaDownload } from "react-icons/fa";
 import { NewHeader } from "../NewHeader";
-import LightGallery from "lightgallery/react";
-import "lightgallery/css/lightgallery.css";
-import "lightgallery/css/lg-thumbnail.css";
-import "lightgallery/css/lg-zoom.css";
-import { GalleryImg } from "../index";
+import { GalleryImg } from "..";
 import PictureData from "../../../images/assets/pictures";
-// Plugins
-import lgThumbnail from "lightgallery/plugins/thumbnail";
-import lgZoom from "lightgallery/plugins/zoom";
 
 const Gallery = () => {
   const [value, setValue] = useState(0);
@@ -18,6 +12,7 @@ const Gallery = () => {
   const [filteredPictures, setFilteredPictures] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedPicture, setSelectedPicture] = useState(null);
 
   const categories = ["All", "graduation", "wedding", "nature"];
 
@@ -42,6 +37,16 @@ const Gallery = () => {
         pictures.filter((pic) => pic.category === selectedCategory)
       );
     }
+  };
+
+  const handlePictureClick = (picture) => {
+    setSelectedPicture(picture);
+    document.body.style.overflow = "hidden"; // Disable scrolling
+  };
+
+  const handleClose = () => {
+    setSelectedPicture(null);
+    document.body.style.overflow = "auto"; // Re-enable scrolling
   };
 
   return (
@@ -97,50 +102,42 @@ const Gallery = () => {
               );
             } else if (filteredPictures.length > 0) {
               return (
-                <LightGallery plugins={[lgThumbnail, lgZoom]} mode="lg-fade">
-                  <Grid container spacing={2} sx={{ marginTop: 2 }}>
-                    {filteredPictures.map((pic, index) => (
-                      <Grid key={pic.id || index} item xs={12} sm={6} md={4}>
-                        {/* Ensure href and data-src are properly set */}
-                        <a
-                          key={pic.id}
-                          href={pic.src} // High-res image URL
-                          data-src={pic.src} // Ensure correct data-src for LightGallery
-                          data-sub-html={`<h4>${pic.alt}</h4>`} // Optional caption
-                        >
-                          <Box
-                            sx={{
-                              width: "100%",
-                              height: 0,
-                              paddingTop: "75%", // Aspect ratio 4:3
-                              position: "relative",
-                              borderRadius: "8px",
-                              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-                              overflow: "hidden",
-                              transition: "transform 0.5s ease-in-out",
-                              "&:hover": {
-                                transform: "scale(1.05)",
-                              },
-                            }}
-                          >
-                            <img
-                              src={pic.src}
-                              alt={pic.alt}
-                              style={{
-                                position: "absolute",
-                                top: 0,
-                                left: 0,
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                              }}
-                            />
-                          </Box>
-                        </a>
-                      </Grid>
-                    ))}
-                  </Grid>
-                </LightGallery>
+                <Grid container spacing={2} sx={{ marginTop: 2 }}>
+                  {filteredPictures.map((pic, index) => (
+                    <Grid key={pic.id || index} item xs={12} sm={6} md={4}>
+                      <Box
+                        sx={{
+                          width: "100%",
+                          height: 0,
+                          paddingTop: "75%",
+                          position: "relative",
+                          borderRadius: "8px",
+                          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                          overflow: "hidden",
+                          transition: "transform 0.5s ease-in-out",
+                          "&:hover": {
+                            transform: "scale(1.05)",
+                          },
+                        }}
+                        onClick={() => handlePictureClick(pic)}
+                      >
+                        <img
+                          src={pic.src}
+                          alt={pic.alt}
+                          loading="lazy"
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
+                        />
+                      </Box>
+                    </Grid>
+                  ))}
+                </Grid>
               );
             } else {
               return (
@@ -159,6 +156,64 @@ const Gallery = () => {
           })()}
         </Box>
       </Box>
+
+      {/* Modal for zoom and download */}
+      {selectedPicture && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            backgroundColor: "rgba(0, 0, 0, 0.9)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 1000,
+          }}
+        >
+          <button
+            style={{
+              position: "absolute",
+              top: 10,
+              right: 10,
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              color: "red",
+              fontSize: "32px",
+            }}
+            onClick={handleClose}
+          >
+            <FaTimes />
+          </button>
+          <img
+            src={selectedPicture.src}
+            alt={selectedPicture.alt}
+            style={{
+              maxWidth: "90%",
+              maxHeight: "90%",
+            }}
+          />
+          <a
+            href={selectedPicture.src}
+            download
+            style={{
+              position: "absolute",
+              bottom: 20,
+              backgroundColor: "#3f51b5",
+              color: "white",
+              padding: "10px 20px",
+              borderRadius: "5px",
+              textDecoration: "none",
+              fontSize: "16px",
+            }}
+          >
+            <FaDownload  />
+          </a>
+        </div>
+      )}
     </>
   );
 };

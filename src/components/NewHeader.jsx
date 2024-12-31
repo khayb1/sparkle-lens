@@ -9,13 +9,12 @@ export const NewHeader = ({ header, text, backgroundImage }) => {
     <div
       className="text-center flex flex-col justify-center p-10 border-b-2 border-gray-50 md:m-0 about"
       style={{
-        backgroundImage: `url(${backgroundImage || "default-background-image.jpg"})`,
+        backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
-        objectFit: "fill",
-        height: "60vh",
+        height: "60vh",  
       }}
     >
       <h1 className="text-5xl relative z-10">{header}</h1>
