@@ -20,15 +20,18 @@ import FavPng from '../../images/assets/fav.png';
 import Graduation1 from "../../images/gallery/graduation1.jpg";
 import Graduation2 from "../../images/gallery/graduation2.jpg";
 import Graduation3 from "../../images/gallery/graduation3.jpg";
+import Graduation4 from "../../images/gallery/graduation4.jpg";
+import Graduation5 from "../../images/gallery/graduation5.jpg";
+import Graduation6 from "../../images/gallery/graduation6.jpg"; 
 import Nature from "../../images/gallery/nature.jpg";
 import Nature2 from "../../images/gallery/nature2.jpg";
 import Nature3 from "../../images/gallery/nature3.jpg";
 import Nature4 from "../../images/gallery/nature4.jpg";
 import Nature5 from "../../images/gallery/nature5.jpg";
-import Wedding1 from "../../images/gallery/wedding1.webp";
+import Wedding1 from "../../images/gallery/wedding1.jpg";
 import Wedding2 from "../../images/gallery/wedding2.jpg";
 import Wedding3 from "../../images/gallery/wedding3.jpg";
-import Wedding4 from "../../images/gallery/wedding4.webp";
+import Wedding4 from "../../images/gallery/wedding4.jpg";
 
 export {
   AboutUsPhoto,
@@ -50,6 +53,9 @@ export {
   Graduation1,
   Graduation2,
   Graduation3,
+  Graduation4,
+  Graduation5,
+  Graduation6,
   Nature,
   Nature2,
   Nature3,
