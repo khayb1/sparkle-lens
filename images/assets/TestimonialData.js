@@ -1,11 +1,11 @@
-import { Avatar, Tes2, Tes3, Tes4, Tes5, Tes6, TesPic1 } from '/src/components/index.js';
+import { Avatar1, Tes2, Tes3, Tes4, Tes5, Tes6, TesPic1 } from '/src/components/index.js';
 
 const testimonials = [
   {
     id: 1,
-    name: 'Jane Smith',
+    name: 'John Smith',
     feedback: 'This service was amazing and exceeded all my expectations!',
-    image: Avatar,
+    image: Avatar1,
   },
   {
     id: 2,

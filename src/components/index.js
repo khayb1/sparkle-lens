@@ -3,6 +3,7 @@
 import AboutUsPhoto from "../../images/about us photo.jpg";
 import AboutBg from "../../images/about-bg.webp";
 import Avatar from "../../images/avatar.jpg";
+import Avatar1 from "../../images/avatar1.jpg";
 import Collaborate from "../../images/collaborate.gif";
 import ContactImg from "../../images/contact.webp";
 import GalleryImg from "../../images/gallery.webp";
@@ -37,6 +38,7 @@ export {
   AboutUsPhoto,
   AboutBg,
   Avatar,
+  Avatar1,
   Collaborate,
   ContactImg,
   GalleryImg,

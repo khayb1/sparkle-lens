@@ -19,10 +19,10 @@ const About = () => {
           <img
             src={Avatar}
             alt="About"
-            className="w-full h-auto object-cover rounded-lg"
+            className="w-full h-auto object-cover object-center rounded-lg"
           />
           <div className="absolute bottom-0 left-0 right-0 text-center">
-            <p className="text-blue-500 pb-7 h-full text-6xl">me</p>
+            <p className="text-blue-500 pb-2 h-full text-6xl">ME</p>
           </div>
         </div>
 
