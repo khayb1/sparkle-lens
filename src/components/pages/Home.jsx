@@ -7,7 +7,7 @@ import { Hero } from "../index";
 
 const Home = (href) => {
   return (
-    <div className=" h-screen flex items-center justify-center space-x-10 bg-cover bg-center hero px-8 body ">
+    <div className=" h-full flex items-center justify-center space-x-10 bg-cover bg-center hero px-8 body ">
       {/* Content */}
       <div className="relative text-center max-w-3xl p-4 md:p-2 lg:p-6 md:mt-[1rem]">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
@@ -20,11 +20,11 @@ const Home = (href) => {
         <HireBtn >View Gallery</HireBtn>
       </div>
 
-      <div className="flex items-center justify-center h-3/4 mt-4 ">
+      <div className="flex items-center justify-center h-3/4 mt-4 "> 
         <img
           src={Hero}
           alt="Photography img"
-          className="w-100 h-full animate-custom-bounce object-cover"
+          className="w-100 h-full  animate-custom-bounce object-cover"
         />
       </div>
     </div>
